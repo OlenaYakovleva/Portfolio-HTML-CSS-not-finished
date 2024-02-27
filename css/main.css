@@ -1,0 +1,187 @@
+/*reset*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*page defaults*/
+html, 
+body{
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+body{
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+	height: 100vh;
+    background: url(/photos/purple-sunset-blocks-ywy8flvfnuxs3fms.jpg);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*general classes*/
+
+.flex-start{
+    display: block;
+
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.dark{
+    background-color: rgba(33, 17, 108, 0.64);
+    color: rgb(9, 26, 61);
+
+}
+/*specific things*/
+body{
+    flex-direction: column;
+    padding-bottom: 50px;
+    
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    padding: 1rem 0.5rem 0.5rem;
+}
+
+.navbar__title{
+    color: cornflowerblue;
+    width: 100%;
+    margin-top: 0;
+    font-size: 1.8rem;
+
+}
+
+.navbar__navmenu{
+    width: 100%;
+    position: absolute;
+
+}
+.navbar__links-button{
+    background: transparent;
+    flex-wrap: wrap;
+    color: rgb(215, 220, 250);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    border: none;}
+
+.navbar__list{
+ display: none;
+    position: unset;
+    top: 100px;
+    left: 50px;
+    background-color: rgb(144, 103, 227);
+    z-index: 1;
+}
+/*when we click on the button, the menu appears*/
+.navbar__navmenu:hover .navbar__list,
+.navbar__navmenu:focus-within .navbar__list{
+    display: flex;
+    max-width: fit-content;
+    background-color: rgb(191, 143, 214);
+    border-radius: 22px;
+    text-transform: capitalize;
+
+}
+
+.navbar__list-item{
+    margin: 0.5rem;
+    list-style-type: none;
+   
+}
+.navbar__list-item:last-child{
+    margin-right: 0;
+}
+.navbar__list-link{
+    color: rgb(255, 255, 255);
+
+}
+.main{
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto; /*everything will be centeres on thepage*/
+
+}
+
+.post{
+    scroll-margin-top: 90px;
+    width: 260px;
+    color: rgb(209, 230, 230);
+    border: solid purple;
+    border-radius: 25px;
+    padding: 1rem;
+    margin-inline: 2rem;
+    margin-top: 10rem;
+    box-shadow: 4px 4px 20px rgb(140, 71, 238);
+    background-color: rgba(71, 9, 107, 0.547);
+
+
+}
+.navbar__links-button:hover{
+    -webkit-animation: scale 2s cubic-bezier(.455,.03,.515,.955) both;
+    animation: scale 3s cubic-bezier(.455,.03,.515,.955) both}
+
+
+
+    @-webkit-keyframes scale {
+        0% {-webkit-transform:translateX(0) rotateY(0);transform:translateX(0) rotateY(0);
+            
+            -webkit-transform-origin: 100% 50%;transform-origin:
+            100% 50%}100%{-webkit-transform:translateX(100%) rotateY(180deg);transform:translateX(100%) rotateY(180deg);-webkit-transform-origin:0 50%;transform-origin:0 50%}}@keyframes scale {0%{-webkit-transform:translateX(0) rotateY(0);transform:translateX(0) rotateY(0);-webkit-transform-origin:100% 50%;transform-origin:100% 50%}100%{-webkit-transform:translateX(100%) rotateY(180deg);transform:translateX(100%) rotateY(180deg);-webkit-transform-origin:0 50%;transform-origin:0 50%}}
+
+.post__img{
+    display: block;
+    margin: 1rem auto;
+    border-radius: 25px;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border: 1px solid rgb(43, 14, 101);
+}
+
+.post__img:hover{
+    border: none;
+    box-shadow: 4px 4px 20px rgb(114, 41, 202);
+    animation: scale 1s;}
+
+@keyframes scale{
+   50%{
+    transform: scale(1);
+   }
+   100%{
+    transform: scale(0.2);
+   } 
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    padding: 1rem 0.5rem 0.5rem;
+    color: cornflowerblue;
+
+
+}
